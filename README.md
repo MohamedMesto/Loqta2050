@@ -52,6 +52,9 @@ The **Loqta2050 News Site** offers several features to enhance user experience:
 
    ![Create Post](assets/images/readme_images/create_post.png)
 
+
+    ![alt text](assets/images/readme_images/Django_administration.png)
+
 3. **Commenting System**: 
    Users can comment on posts, fostering discussions on different news stories.
    
@@ -72,9 +75,6 @@ The **Loqta2050 News Site** offers several features to enhance user experience:
 
 7. **Admin Moderation Tools**: 
    Admin users have access to moderation tools, allowing them to approve, delete, or edit user content when necessary.
-
-
-    ![alt text](assets/images/readme_images/Django_administration.png)
 
 8. **Pagination for Posts**: 
    Users can browse through a paginated list of posts, making it easier to explore older news stories.
@@ -134,3 +134,44 @@ Automated unit tests were also written for core functionalities such as post cre
 All Python code has been validated using `flake8`, and the HTML has been tested using [W3C Markup Validator](https://validator.w3.org/). No major issues were found.
 
 
+## Getting Started:
+
+To set up **Loqta2050** locally for development or testing purposes, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Create a virtual environment and install the dependencies using:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Set up the PostgreSQL database and configure environment variables in `.env` (use `.env.example` for reference).
+4. Run migrations:
+   ```
+   python manage.py migrate
+   ```
+5. Create a superuser:
+   ```
+   python manage.py createsuperuser
+   ```
+6. Start the Django development server:
+   ```
+   python manage.py runserver
+   ```
+7. Access the site locally at [http://localhost:8000](http://localhost:8000).
+
+## Deployment:
+
+This project can be deployed on platforms such as **Heroku** using the following steps:
+
+1. Create a Heroku app and set the buildpacks to:
+   1. `heroku/python`
+   2. `heroku/nodejs` (if using front-end dependencies)
+   
+2. Set the required environment variables:
+   - `DATABASE_URL`
+   - `SECRET_KEY`
+   - `DEBUG` (set to `False` in production)
+   
+3. Push your project to Heroku:
+   ```
+   git push heroku main
+   ```

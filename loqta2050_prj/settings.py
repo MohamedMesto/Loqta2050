@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+
+if os.path.isfile('env.py'):
+    import env
+
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +31,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u4a2((m=e@x@2ack-4km8&u5i1lxn_ov+n8ys0cb5c3hrrpgda'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 # DEBUG = True
+
 
 DEBUG = False
 
@@ -80,12 +90,20 @@ WSGI_APPLICATION = 'loqta2050_prj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse("postgres://u8uru0jsfvv:ei23xhvxWSL7@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/crumb_iron_chase_973748")
 }
+
+
+
 
 
 # Password validation

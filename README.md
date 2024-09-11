@@ -11,8 +11,6 @@ Welcome to **Loqta2050**, a dynamic and interactive news platform built using Dj
 
 [Here is our E-commerce Website](https://loqta2050.com/)
 
-[Here is our personal Website](https://un2050.de/)
-
 ![devices](assets/images/readme_images/devices.png)
 
 ## Purpose of the project
@@ -75,6 +73,9 @@ The **Loqta2050 News Site** offers several features to enhance user experience:
 7. **Admin Moderation Tools**: 
    Admin users have access to moderation tools, allowing them to approve, delete, or edit user content when necessary.
 
+
+    ![alt text](assets/images/readme_images/Django_administration.png)
+
 8. **Pagination for Posts**: 
    Users can browse through a paginated list of posts, making it easier to explore older news stories.
 
@@ -109,6 +110,27 @@ The relational model ensures each post has associated comments, votes, and categ
 
 
 
+## Testing:
+
+Manual testing was conducted by simulating common user behaviors, including:
+- Creating posts and comments as a logged-in user.
+- Upvoting and downvoting posts.
+- Filtering posts by category.
+- Ensuring valid inputs and error handling for invalid inputs (e.g., invalid post data, duplicate votes).
+
+Automated unit tests were also written for core functionalities such as post creation, comment submission, and user authentication.
+
+## Bugs:
+
+### Solved Bugs:
+- Pagination initially displayed incorrectly on smaller devices. This was fixed by adjusting the CSS for responsive behavior.
+- An issue with user authentication when attempting to comment was resolved by properly linking the user session to the comment submission form.
+
+### Remaining Bugs:
+- Currently, no known bugs remain.
+
+## Validator Testing:
+
+All Python code has been validated using `flake8`, and the HTML has been tested using [W3C Markup Validator](https://validator.w3.org/). No major issues were found.
 
 
-![alt text](assets/images/readme_images/Django_administration.png)

@@ -7,7 +7,7 @@
 
 Welcome to **Loqta2050**, a dynamic and interactive news platform built using Django. Loqta2050 is designed to provide users with the ability to post, read, and comment on news articles, offering a community-driven space for discussion and engagement. Whether you want to stay up-to-date with the latest news, engage in discussions, or share your opinions, **Loqta2050** provides a user-friendly platform for a seamless experience.
 
-[Here is the live version of the project](https://loqta2050-89fbbef45245.herokuapp.com/home/)
+[Here is the live version of the project](https://loqta2050-89fbbef45245.herokuapp.com/admin)
 
 [Here is our E-commerce Website](https://loqta2050.com/)
 
@@ -79,3 +79,36 @@ The **Loqta2050 News Site** offers several features to enhance user experience:
    Users can browse through a paginated list of posts, making it easier to explore older news stories.
 
    ![Pagination](assets/images/readme_images/pagination.png)
+
+
+### Future Features:
+
+1. **Private Messaging**: 
+   Users will be able to send private messages to one another for more direct engagement.
+   
+2. **Multimedia Support**: 
+   The ability for users to include images or videos in their posts to enhance the richness of shared content.
+   
+3. **Push Notifications**: 
+   Users will receive notifications for upvotes, comments, and replies on their posts.
+   
+4. **Tagging System**: 
+   Implement a tagging system for posts to enable better organization and searching across topics.
+
+## Data Model:
+
+This project uses Django’s Object-Relational Mapping (ORM) to handle data interactions between the application and PostgreSQL. The key models are as follows:
+
+- **User**: Handles authentication and user profile information.
+- **Post**: Represents a news article or story, including its title, content, author, category, and timestamp.
+- **Comment**: Represents user comments on a post.
+- **Category**: Represents a grouping or category of posts (e.g., Politics, Technology).
+- **Vote**: Handles upvoting and downvoting of posts and comments.
+
+The relational model ensures each post has associated comments, votes, and categories.
+
+
+
+
+
+![alt text](assets/images/readme_images/Django_administration.png)

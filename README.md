@@ -122,6 +122,16 @@ Automated unit tests were also written for core functionalities such as post cre
 
 ## Bugs:
 
+- http://127.0.0.1:8000/admin/posts/post/
+
+![alt text](assets/images/readme_images/post_add.png)
+
+
+- http://127.0.0.1:8000/admin/posts/post/add/
+
+![alt text](assets/images/readme_images/post_show.png)
+
+
 ### Solved Bugs:
 - Pagination initially displayed incorrectly on smaller devices. This was fixed by adjusting the CSS for responsive behavior.
 - An issue with user authentication when attempting to comment was resolved by properly linking the user session to the comment submission form.
@@ -175,3 +185,9 @@ This project can be deployed on platforms such as **Heroku** using the following
    ```
    git push heroku main
    ```
+## Credits:
+
+- Django documentation for providing in-depth guidance on using the framework.
+- [Unsplash](https://unsplash.com/) for free images used in the project.
+- [Pexels](https://www.pexels.com/) for additional media resources.
+- Icons from [FontAwesome](https://fontawesome.com/).

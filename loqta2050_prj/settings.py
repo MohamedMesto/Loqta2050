@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # DEBUG = True
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
@@ -53,10 +53,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'catalogs',
-    'products',
     'about',
     'contact',
+    'users',
+    'posts',
+    'comments',
+    'categories',
+    'votes',
+    'notifications',
+    'moderation',
+    'search',
 ]
 
 MIDDLEWARE = [

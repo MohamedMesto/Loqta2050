@@ -76,6 +76,8 @@ The **Loqta2050 News Site** offers several features to enhance user experience:
 7. **Admin Moderation Tools**: 
    Admin users have access to moderation tools, allowing them to approve, delete, or edit user content when necessary.
 
+![alt text](assets/images/readme_images/add_user.png)
+
 8. **Pagination for Posts**: 
    Users can browse through a paginated list of posts, making it easier to explore older news stories.
 

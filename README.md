@@ -114,14 +114,51 @@ The relational model ensures each post has associated comments, votes, and categ
 
 ## Testing:
 
-Manual testing was conducted by simulating common user behaviors, including:
-- Creating posts and comments as a logged-in user.
-- Upvoting and downvoting posts.
-- Filtering posts by category.
-- Ensuring valid inputs and error handling for invalid inputs (e.g., invalid post data, duplicate votes).
+### Manual Testing:
+We conducted manual testing by simulating common user behaviors to ensure the system works as expected. The scenarios tested include:
 
-Automated unit tests were also written for core functionalities such as post creation, comment submission, and user authentication.
+- **Creating posts and comments**: We verified that logged-in users can successfully create, edit, and delete posts and comments, ensuring that these actions were handled correctly by the system.
+- **Upvoting and downvoting posts**: We tested the voting functionality to confirm that users could only vote once per post and that votes were correctly recorded and displayed.
+- **Filtering posts by category**: We checked the category filter functionality to ensure users could easily browse posts based on specific categories.
+- **Handling valid and invalid inputs**: We tested the system's ability to handle both valid and invalid inputs, ensuring appropriate error messages were displayed when users submitted empty forms, invalid post data, or attempted duplicate votes.
 
+### Automated Unit Testing:
+We also wrote and ran unit tests using Django’s `unittest` framework to verify the core functionalities of the website. Below is a summary of the unit tests we implemented:
+
+1. **Post Creation and Retrieval:**
+   - We wrote tests to verify that logged-in users can create new posts and that required fields are validated.
+   - We ensured that posts were correctly displayed on both the homepage and individual post pages.
+   - We tested the pagination feature to confirm that posts were properly divided into pages.
+
+2. **Comment Submission:**
+   - We confirmed that logged-in users could submit comments on posts and that these comments were correctly linked to the relevant posts and displayed in the right order.
+   - We ensured non-logged-in users were restricted from submitting comments.
+
+3. **User Authentication:**
+   - We created unit tests to verify that users could successfully register, log in, and log out.
+   - We tested that only authenticated users could create, edit, or delete posts and comments.
+   - We ensured that password reset and account management features functioned as expected.
+
+4. **Post Voting System:**
+   - We wrote tests to confirm that the upvoting and downvoting functionality worked correctly, ensuring users could only vote once per post.
+   - We ensured that vote counts were updated in real-time and accurately reflected user inputs.
+
+5. **Category Filtering:**
+   - We tested the category filtering functionality to confirm that posts were correctly filtered and displayed based on the category selected.
+   - We ensured users could navigate between categories without any errors.
+
+6. **Error Handling:**
+   - We validated that the system properly handled invalid inputs, such as attempts to create posts or comments with missing data or invalid forms.
+   - We checked that the system displayed helpful error messages when users performed invalid actions.
+
+### Running Tests:
+To run the unit tests we created, you can use the following command in the project directory:
+
+```bash
+python manage.py test
+```
+
+This command will execute all the tests we implemented, allowing you to confirm that each core functionality works as intended. Running these tests ensures that the site remains robust and stable throughout development.
 ## Bugs:
 
 - http://127.0.0.1:8000/admin/posts/post/
@@ -193,3 +230,4 @@ This project can be deployed on platforms such as **Heroku** using the following
 - [Unsplash](https://unsplash.com/) for free images used in the project.
 - [Pexels](https://www.pexels.com/) for additional media resources.
 - Icons from [FontAwesome](https://fontawesome.com/).
+- Other Django, Python Websites
